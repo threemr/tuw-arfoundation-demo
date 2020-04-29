@@ -52,7 +52,8 @@ public class ARTapToPlaceObject : MonoBehaviour
     {
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
-        arOrigin.Raycast(screenCenter, hits, TrackableType.Planes);
+    // The following line was removed to fix errors.
+    // arOrigin.Raycast(screenCenter, hits, TrackableType.Planes);
 
         placementPoseIsValid = hits.Count > 0;
         if (placementPoseIsValid)
